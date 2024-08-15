@@ -28,7 +28,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 06061929
-      POSTGRES_DB: pedido-api
+      POSTGRES_DB: pedidos-api
     ports:
       - '5432:5432'
     volumes:
