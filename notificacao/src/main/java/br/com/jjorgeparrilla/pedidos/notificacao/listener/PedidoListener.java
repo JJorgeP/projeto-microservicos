@@ -23,11 +23,11 @@ public class PedidoListener {
     @RabbitListener(queues = "pedido.v1.pedido-criado-gerar-notificacao")
     public void enviarNotificacao(Pedido pedido) {
 
-        logger.info("Tentando consumir a mensagem");
-
-        if (pedido.getValorTotal() > 2000) {
-            throw new RuntimeException("Valor muito alto");
-        }
+//        logger.info("Tentando consumir a mensagem");
+//
+//        if (pedido.getValorTotal() > 2000) {
+//            throw new RuntimeException("Valor muito alto");
+//        }
         emailService.enviarEmail(pedido);
         logger.info("Notificação gerada: {}", pedido.toString());
 
